@@ -5,7 +5,7 @@ def add_arg(argv):
         print("{:d}".format(n))
         return
     else:
-        i= 1
+        i = 1
         add = 0
         while i <= n:
             add += int(argv[i])
