@@ -1,48 +1,53 @@
->>> MyList = __import__("1-my_list").MyList
->>> ls = MyList()
->>> ls.print_sorted()
-[]
->>> ls.append(0)
->>> ls.print_sorted()
-[0]
->>> ls.append(1)
->>> ls.print_sorted()
-[0, 1]
->>> ls.append(-1)
->>> print(ls)
-[0, 1, -1]
->>> ls.print_sorted()
-[-1, 0, 1]
->>> print(ls)
-[0, 1, -1]
->>> ls.clear()
->>> ls.append('z')
->>> ls.print_sorted()
-['z']
->>> ls.append('a')
->>> ls.print_sorted()
-['a', 'z']
->>> ls.append(0)
->>> ls.print_sorted()
-Traceback (most recent call last):
-  ...
-TypeError: unorderable types: int() < str()
->>> ls.reverse()
->>> ls.print_sorted()
-Traceback (most recent call last):
-  ...
-TypeError: unorderable types: str() < int()
->>> ls.clear()
->>> ls.append(float("inf"))
->>> ls.append(0)
->>> ls.append(float("-inf"))
->>> ls.print_sorted()
-[-inf, 0, inf]
->>> ls.clear()
->>> ls.append(0)
->>> ls.append(float("nan"))
->>> ls.print_sorted()
-[0, nan]
->>> ls.reverse()
->>> ls.print_sorted()
-[nan, 0]
+=============================
+The ``1-my_list`` module
+=============================
+
+Using ``MyList``
+---------------------
+
+Import the class:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Now test it:
+
+    >>> my_list = MyList()
+
+    >>> my_list
+    []
+
+    >>> my_list.append(1)
+
+    >>> my_list.append(4)
+
+    >>> my_list.append(2)
+
+    >>> my_list
+    [1, 4, 2]
+
+    >>> my_list.print_sorted()
+    [1, 2, 4]
+
+    >>> my_list
+    [1, 4, 2]
+
+    >>> my_list = MyList([3, 6, 2])
+
+    >>> my_list
+    [3, 6, 2]
+
+    >>> my_list.print_sorted()
+    [2, 3, 6]
+
+    >>> my_list = MyList("hello")
+    
+    >>> my_list
+    ['h', 'e', 'l', 'l', 'o']
+
+    >>> my_list.print_sorted()
+    ['e', 'h', 'l', 'l', 'o']
+
+    >>> new_l = MyList()
+
+    >>> new_l.print_sorted()
+    []

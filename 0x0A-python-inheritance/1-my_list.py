@@ -1,12 +1,15 @@
 #!/usr/bin/python3
-""" Manipulate lists of integers
+"""Module 1-my_list.
+Creates a class inheriting from the list class.
 """
 
 
 class MyList(list):
-    """ Manage a list of integers
-    """
+    """Class MyList inherits from list."""
+
     def print_sorted(self):
-        """ Print a list sorted in ascending order
-        """
-        print(sorted(self))
+        """Prints the list, in ascending sort."""
+
+        new_list = self[:]
+        new_list.sort()
+        print("{}".format(new_list))
