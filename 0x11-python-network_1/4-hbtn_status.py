@@ -5,7 +5,7 @@ Send a request to a URL and display the body of the response
 
 import requests
 
-URL = 'https://intranet.hbtn.io/status'
+URL = 'https://alx-intranet.hbtn.io/status'
 
 if __name__ == '__main__':
 

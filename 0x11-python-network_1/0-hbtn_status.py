@@ -5,7 +5,7 @@ Makes a request and prints information about the body of the response
 
 from urllib.request import urlopen
 
-URL = 'https://intranet.hbtn.io/status'
+URL = 'https://alx-intranet.hbtn.io/status'
 
 if __name__ == '__main__':
 
